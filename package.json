@@ -55,5 +55,10 @@
     ">0.3%, defaults",
     "fully supports es6-module",
     "maintained node versions"
-  ]
+  ],
+  "volta": {
+    "node": "20.9.0",
+    "npm": "10.2.1",
+    "yarn": "4.0.0"
+  }
 }
