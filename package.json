@@ -38,14 +38,14 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
+    "*.{js,jsx,ts,tsx,astro}": [
       "prettier --write",
-      "lint:scripts",
+      "eslint --fix",
       "git add"
     ],
-    "*.{css,scss}": [
+    "*.{css,scss,less}": [
       "prettier --write",
-      "lint:styles",
+      "stylelint ./src/**/*.{css,scss,sass,less} --fix",
       "git add"
     ]
   },
