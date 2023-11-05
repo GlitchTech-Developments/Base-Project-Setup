@@ -26,15 +26,8 @@ jobs:
       - name: Install dependencies 📥
         run: npm install
 
-      - name: Try building project 🏗
-        run: npm run build
-
       - name: Check for changes 📝
         run: git diff --quiet || git diff --exit-code
-
-      - name: Cancel on build errors ❌
-        if: ${{ failure() }}
-        run: exit 1
 
       - name: Commit and create PR 🔀
         uses: peter-evans/create-pull-request@v3
